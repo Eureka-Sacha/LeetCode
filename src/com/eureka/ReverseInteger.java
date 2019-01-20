@@ -96,6 +96,10 @@ public class ReverseInteger {
         long start = System.currentTimeMillis();
         System.out.println(reverseMyself(1534236469));
         System.out.println(System.currentTimeMillis() - start + "ms");
+        start = System.currentTimeMillis();
+        System.out.println(reverse(1534236469));
+        System.out.println(System.currentTimeMillis() - start + "ms");
+
     }
 
 }
