@@ -27,15 +27,29 @@ package com.eureka;
  * 你能不使用循环或者递归来完成本题吗？
  */
 public class IsPowerOfThree {
-    public static boolean isPowerOfThree(int n) {
-        return false;
+    public static boolean isPowerOfThree1(int n) {
+        if (n <= 0) return false;
+        for (int i = n; i > 1; i /= 3) {
+            if (i % 3 != 0) return false;
+        }
+        return true;
     }
 
+    //抄自leetcode题目评论区;
+    //牛逼不解释
+    public static boolean isPowerOfThree2(int n) {
+        return n > 0 && 1162261467 % n == 0;
+    }
+
+
     public static void main(String[] args) {
-        System.out.println(2<<10);
         long start = System.currentTimeMillis();
-        System.out.println(isPowerOfThree(9));
+        System.out.println(isPowerOfThree1(9));
         System.out.println(System.currentTimeMillis() - start + "ms");
+        start = System.currentTimeMillis();
+        System.out.println(isPowerOfThree2(9));
+        System.out.println(System.currentTimeMillis() - start + "ms");
+
     }
 
 }
