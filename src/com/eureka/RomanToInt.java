@@ -51,7 +51,7 @@ import java.util.Map;
  * 解释: M = 1000, CM = 900, XC = 90, IV = 4.
  */
 public class RomanToInt {
-    static Map<String, Integer> ROMAN_INT = new HashMap<>();
+    private static Map<String, Integer> ROMAN_INT = new HashMap<>();
 
     static {
         ROMAN_INT.put("M", 1000);
